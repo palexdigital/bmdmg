@@ -29,7 +29,8 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
         html { scroll-behavior: smooth; }
-        .hero-overlay { background: linear-gradient(180deg, rgba(10,35,66,0.85) 0%, rgba(10,35,66,0.95) 100%); }
+        /* Lightened overlay opacity to make the background video fully visible */
+        .hero-overlay { background: linear-gradient(180deg, rgba(10,35,66,0.3) 0%, rgba(10,35,66,0.5) 100%); }
     </style>
 </head>
 <body class="bg-white text-aviationNavy font-sans antialiased">
@@ -39,7 +40,7 @@
             <div class="flex items-center justify-between h-20">
                 <div class="flex items-center gap-3">
                     <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-skyBlue bg-white flex items-center justify-center p-0.5">
-                        <img src="logoss.jpeg" alt="SkySkool Logo" class="w-full h-full object-cover rounded-full">
+                        <img src="WhatsApp Image 2026-06-23 at 23.28.24.jpg" alt="SkySkool Logo" class="w-full h-full object-cover rounded-full">
                     </div>
                     <span class="text-xl font-bold tracking-wider uppercase">Sky<span class="text-skyBlue font-normal italic">Skool</span></span>
                 </div>
@@ -60,17 +61,17 @@
 
     <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-aviationNavy">
         <div class="absolute inset-0 w-full h-full object-cover z-0">
-            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-40">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-80">
                 <source src="hero.mp4" type="video/mp4">
             </video>
         </div>
         <div class="absolute inset-0 hero-overlay z-10"></div>
 
         <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-20 pt-12 pb-20">
-            <h1 class="text-5xl sm:text-7xl lg:text-9xl font-bold tracking-tight mb-6 max-w-4xl mx-auto uppercase leading-tight">
+            <h1 class="text-5xl sm:text-7xl lg:text-9xl font-bold tracking-tight mb-6 max-w-4xl mx-auto uppercase leading-tight drop-shadow-md">
                 SKY <span class="text-skyBlue font-normal italic">SKOOL</span>
             </h1>
-            <p class="text-xl sm:text-3xl text-cloudWhite/90 max-w-2xl mx-auto font-medium tracking-wide uppercase italic mb-12">
+            <p class="text-xl sm:text-3xl text-cloudWhite/90 max-w-2xl mx-auto font-medium tracking-wide uppercase italic mb-12 drop-shadow-sm">
                 COME GET HIGH WITH US
             </p>
             <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
