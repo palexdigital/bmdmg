@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkySkool - Elevating Aviation Knowledge</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        skyBlue: '#3DA5FF',
+                        aviationNavy: '#0A2342',
+                        cloudWhite: '#F8FBFF',
+                        runwayGray: '#E7EDF4',
+                        successGreen: '#00C896',
+                        alertOrange: '#FFB547',
+                        dangerRed: '#FF5A5A',
+                    },
+                    fontFamily: {
+                        sans: ['Playfair Display', 'Georgia', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+        html { scroll-behavior: smooth; }
+        .hero-overlay { background: linear-gradient(180deg, rgba(10,35,66,0.85) 0%, rgba(10,35,66,0.95) 100%); }
+    </style>
+</head>
+<body class="bg-white text-aviationNavy font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-aviationNavy/95 backdrop-blur-md border-b border-white/10 text-white transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full overflow-hidden border-2 border-skyBlue bg-white flex items-center justify-center p-0.5">
+                        <img src="WhatsApp Image 2026-06-23 at 23.28.24.jpg" alt="SkySkool Logo" class="w-full h-full object-cover rounded-full">
+                    </div>
+                    <span class="text-xl font-bold tracking-wider uppercase">Sky<span class="text-skyBlue font-normal italic">Skool</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide">
+                    <a href="#home" class="hover:text-skyBlue transition">Home</a>
+                    <a href="#why-skyskool" class="hover:text-skyBlue transition">Why SkySkool</a>
+                    <a href="#subjects" class="hover:text-skyBlue transition">Subjects</a>
+                    <a href="#simulator" class="hover:text-skyBlue transition">Exam Simulator</a>
+                    <a href="#pricing" class="hover:text-skyBlue transition">Pricing</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#login" class="text-sm font-medium hover:text-skyBlue transition">Login</a>
+                    <a href="#pricing" class="bg-skyBlue hover:bg-blue-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold tracking-wide transition shadow-lg shadow-skyBlue/20">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-aviationNavy">
+        <div class="absolute inset-0 w-full h-full object-cover z-0">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-40">
+                <source src="hero.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="absolute inset-0 hero-overlay z-10"></div>
+
+        <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white z-20 pt-12 pb-20">
+            <h1 class="text-5xl sm:text-7xl lg:text-9xl font-bold tracking-tight mb-6 max-w-4xl mx-auto uppercase leading-tight">
+                SKY <span class="text-skyBlue font-normal italic">SKOOL</span>
+            </h1>
+            <p class="text-xl sm:text-3xl text-cloudWhite/90 max-w-2xl mx-auto font-medium tracking-wide uppercase italic mb-12">
+                COME GET HIGH WITH US
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+                <a href="#pricing" class="w-full sm:w-auto bg-skyBlue hover:bg-blue-600 text-white px-8 py-4 rounded-xl text-base font-semibold tracking-wide transition shadow-xl shadow-skyBlue/20 text-center">Start Learning</a>
+                <a href="#subjects" class="w-full sm:w-auto bg-white/5 hover:bg-white/10 border border-white/20 text-white px-8 py-4 rounded-xl text-base font-semibold tracking-wide transition text-center backdrop-blur-sm">View Courses</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-skyskool" class="py-24 bg-cloudWhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold text-skyBlue tracking-widest uppercase italic">Engineered Platform</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-aviationNavy mt-2">Why Aviation Students Choose SkySkool</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 border border-runwayGray shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-skyBlue/10 flex items-center justify-center text-skyBlue mb-6 group-hover:bg-skyBlue group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-database text-lg"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-aviationNavy">Question Bank</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6 italic">Highly targeted database up to date with modern EASA, FAA, and national authority criteria structures.</p>
+                    <div class="w-full h-40 rounded-lg overflow-hidden bg-slate-100">
+                        <div class="w-full h-full bg-slate-200 animate-pulse bg-cover bg-center" style="background-image: url('images01.jpg');"></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-runwayGray shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-skyBlue/10 flex items-center justify-center text-skyBlue mb-6 group-hover:bg-skyBlue group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-stopwatch text-lg"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3 text-aviationNavy">Mock Exams</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6 italic">Real-time dynamic test simulation constraints mirroring standard technical exam conditions perfectly.</p>
+                    <div class="w-full h-40 rounded-lg overflow-hidden bg-slate-100">
+                        <div class="w-full h-full bg-slate-200 animate-pulse bg-cover bg-center" style="background-image: url('images02.jpg');"></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 border border-runwayGray shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="w-12 h-12 rounded-xl bg-skyBlue/10 flex items-center justify-center text-skyBlue mb-6 group-hover:bg-skyBlue group-hover:text-white transition-all duration-300">
+                        <i class="fa-solid fa-chart-line text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-aviationNavy">Performance Tracking</h3>
+                    <p class="text-slate-600 text-sm font-light leading-relaxed mb-6 italic">Intelligent vector tracking of your individual weak areas to target optimization loops metrics efficiently.</p>
+                    <div class="w-full h-40 rounded-lg overflow-hidden bg-slate-100">
+                        <div class="w-full h-full bg-slate-200 animate-pulse bg-cover bg-center" style="background-image: url('images03.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="subjects" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+                <div>
+                    <span class="text-xs font-bold text-skyBlue tracking-widest uppercase italic">Comprehensive Syllabus</span>
+                    <h2 class="text-3xl sm:text-5xl font-bold text-aviationNavy mt-2">Core Training Subjects</h2>
+                </div>
+                <div class="flex gap-2">
+                    <span class="text-xs text-slate-400 font-medium italic">System Assets: images04.jpg | images05.jpg | images06.jpg</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-gavel text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">ATPL / CPL</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Air Law</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">International operational guidelines, rules of the air, and airspace structures.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-cloud-showers-heavy text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">ATPL / CPL</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Meteorology</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Atmospheric systems, pressure matrix trends, weather charts, and high altitude tracking.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-compass text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">ATPL / CPL</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Navigation</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Inertial navigation models, chart projections, vector calculations, and routing plans.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-sliders text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">ATPL / CPL</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Flight Planning</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Fuel matrix profiles, weight and balance formulas, operational performance parameters.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-brain text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">Core Tech</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Human Performance</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Aviation physiology, psychological parameters, cognitive overload containment.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-gears text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">Core Tech</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Aircraft Technical</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Airframe structures, hydraulic distribution setups, powerplants, and turbine frameworks.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-circle-nodes text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">Instruments</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Instruments</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Flight deck displays, automation structures, gyroscopic mechanics, and warning systems.</p>
+                </div>
+
+                <div class="border border-runwayGray hover:border-skyBlue p-6 rounded-xl transition bg-cloudWhite/50 group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fa-solid fa-tower-cell text-aviationNavy group-hover:text-skyBlue text-xl transition"></i>
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-slate-400 bg-runwayGray px-2 py-0.5 rounded">Instruments</span>
+                    </div>
+                    <h4 class="font-bold text-xl text-aviationNavy">Radio Navigation</h4>
+                    <p class="text-slate-500 text-xs mt-1 font-light italic">Radar infrastructure, VOR/DME alignments, satellite configurations, and ILS systems.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="simulator" class="py-24 bg-aviationNavy text-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5 space-y-6">
+                <span class="text-xs font-bold text-skyBlue tracking-widest uppercase italic">Cockpit-Grade Interface</span>
+                <h2 class="text-3xl sm:text-5xl font-bold tracking-tight">Interactive Exam Simulator</h2>
+                <p class="text-cloudWhite/70 font-light text-sm leading-relaxed italic">
+                    Train in an immersive environment replicating the physical testing systems of regulatory bodies. Fully optimized tool stack configurations built directly into video02.mp4 framework.
+                </p>
+                <div class="space-y-4 pt-4">
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-successGreen mt-1"></i>
+                        <div>
+                            <h5 class="font-semibold text-base">Dynamic Testing Chronometers</h5>
+                            <p class="text-xs text-cloudWhite/50 italic">Strict timers tracking baseline fatigue degradation metrics over testing tracks.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-successGreen mt-1"></i>
+                        <div>
+                            <h5 class="font-semibold text-base">Flag for Review Matrix</h5>
+                            <p class="text-xs text-cloudWhite/50 italic">Tag complex questions to revisit instantly before system threshold submission sequence auto-fires.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lg:col-span-7 bg-slate-900 border border-white/10 rounded-2xl p-4 sm:p-6 shadow-2xl relative">
+                <div class="flex justify-between items-center pb-4 border-b border-white/10 mb-6 text-xs text-cloudWhite/60">
+                    <div class="flex items-center gap-4">
+                        <span><strong class="text-white italic">Exam track:</strong> ATPL Meteorology</span>
+                        <span class="hidden sm:inline text-white/20">|</span>
+                        <span class="hidden sm:inline"><strong class="text-white italic">Difficulty:</strong> Medium</span>
+                    </div>
+                    <div class="bg-dangerRed/10 border border-dangerRed/30 px-3 py-1 rounded text-dangerRed font-mono font-semibold">
+                        <i class="fa-solid fa-clock-rotate-left mr-1"></i> 01:42:15
+                    </div>
+                </div>
+
+                <div class="w-full bg-slate-800 h-1.5 rounded-full mb-6">
+                    <div class="bg-skyBlue h-full w-2/5 rounded-full"></div>
+                </div>
+
+                <div class="space-y-4 mb-6">
+                    <span class="text-xs text-skyBlue font-mono font-medium italic">QUESTION 14 OF 60</span>
+                    <h4 class="text-base sm:text-xl font-medium text-white leading-relaxed italic">
+                        What atmospheric constraint sequence triggers classic severe clear ice generation layers on airframe wing structures?
+                    </h4>
+                </div>
+
+                <div class="space-y-3">
+                    <label class="block border border-white/10 bg-white/5 hover:bg-white/10 p-4 rounded-xl cursor-pointer text-sm transition italic">
+                        <input type="radio" name="sim-option" class="accent-skyBlue mr-3"> Large supercooled water droplets within cumulative updraft bands between 0°C and -10°C.
+                    </label>
+                    <label class="block border border-skyBlue/50 bg-skyBlue/10 p-4 rounded-xl cursor-pointer text-sm transition italic">
+                        <input type="radio" name="sim-option" class="accent-skyBlue mr-3" checked> Small localized condensation moisture tracks freezing instataneously at high wind velocities below -25°C.
+                    </label>
+                    <label class="block border border-white/10 bg-white/5 hover:bg-white/10 p-4 rounded-xl cursor-pointer text-sm transition italic">
+                        <input type="radio" name="sim-option" class="accent-skyBlue mr-3"> High altocumulus layers directly experiencing temperature inversion vectors above continental divides.
+                    </label>
+                </div>
+
+                <div class="flex justify-between items-center mt-8 pt-4 border-t border-white/10">
+                    <button class="text-xs text-cloudWhite/60 hover:text-white border border-white/20 px-4 py-2 rounded-lg transition italic"><i class="fa-regular fa-flag mr-1"></i> Mark for Review</button>
+                    <button class="bg-skyBlue hover:bg-blue-600 text-white text-xs font-semibold px-5 py-2.5 rounded-lg transition italic">Next Question &rarr;</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-cloudWhite">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-skyBlue tracking-widest uppercase italic">Verified Excellence</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-aviationNavy mt-2">Pilot Success Tracks</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl border border-runwayGray shadow-sm flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm font-light italic leading-relaxed mb-6">"The tracking accuracy maps inside the dashboard perfectly predicted my core weak modules inside Instrumentation. I cleared my regional authority exams with zero setbacks."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('images07.jpg');"></div>
+                        <div>
+                            <h5 class="text-sm font-bold text-aviationNavy">Capt. Julian Vance</h5>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5 italic">First Officer, A320</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-runwayGray shadow-sm flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm font-light italic italic leading-relaxed mb-6">"The simulation controls feel identical to actual testing screens. Training with identical countdown parameters removed all operational stress from examination days."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('images08.jpg');"></div>
+                        <div>
+                            <h5 class="text-sm font-bold text-aviationNavy">Amara Okafor</h5>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5 italic">Commercial Pilot Cadet</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-2xl border border-runwayGray shadow-sm flex flex-col justify-between">
+                    <p class="text-slate-600 text-sm font-light italic leading-relaxed mb-6">"An exceptional structured content library. Rather than parsing long archaic textbook modules, the targeted notes allowed hyper-efficient retrieval optimization loops."</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-full bg-slate-200 bg-cover bg-center" style="background-image: url('images09.jpg');"></div>
+                        <div>
+                            <h5 class="text-sm font-bold text-aviationNavy">Marcus Lindqvist</h5>
+                            <p class="text-[11px] text-slate-400 uppercase tracking-wider mt-0.5 italic">Private Pilot License holder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-24 bg-white border-t border-runwayGray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold text-skyBlue tracking-widest uppercase italic">Flexible Subscriptions</span>
+                <h2 class="text-3xl sm:text-5xl font-bold text-aviationNavy mt-2">Transparent Subscriptions</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 items-start max-w-6xl mx-auto">
+                <div class="border border-runwayGray bg-cloudWhite/30 rounded-2xl p-8 relative">
+                    <h4 class="text-xl font-bold text-aviationNavy mb-2">Monthly Cadence</h4>
+                    <p class="text-slate-500 text-xs font-light mb-6 italic">Perfect for short-term final reviews before target scheduled exam boards.</p>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-bold text-aviationNavy tracking-tight">R895</span>
+                        <span class="text-slate-400 text-sm italic">/ month</span>
+                    </div>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8 font-light italic">
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Access to all 8 core subjects</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Standard Simulator Modes</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> 10,000+ Active Questions</li>
+                        <li class="text-slate-300"><i class="fa-solid fa-xmark mr-2"></i> Advanced Performance Analytics</li>
+                    </ul>
+                    <button class="w-full py-3 px-4 border border-aviationNavy/20 text-aviationNavy font-semibold rounded-xl text-sm hover:bg-aviationNavy hover:text-white transition italic">Select Monthly Plan</button>
+                </div>
+
+                <div class="border-2 border-skyBlue bg-aviationNavy text-white rounded-2xl p-8 relative shadow-xl shadow-aviationNavy/10">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-skyBlue text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider italic">Most Recommended</div>
+                    <h4 class="text-xl font-bold mb-2">Annual Pass</h4>
+                    <p class="text-cloudWhite/60 text-xs font-light mb-6 italic">Complete strategic preparation framework covering complete commercial training cycles.</p>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-bold tracking-tight">R345</span>
+                        <span class="text-cloudWhite/40 text-sm italic">/ month</span>
+                    </div>
+                    <p class="text-xs text-skyBlue font-medium mb-6 italic">Billed annually (R4,140 total payment processing)</p>
+                    <ul class="space-y-3 text-sm text-cloudWhite/80 mb-8 font-light italic">
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Access to all 8 core subjects</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Premium Simulator Modes</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Unlimited Simulated Mock Finals</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Downloadable Offline Study Notes</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Advanced Performance Analytics</li>
+                    </ul>
+                    <button class="w-full py-3 px-4 bg-skyBlue hover:bg-blue-600 text-white font-semibold rounded-xl text-sm transition shadow-lg shadow-skyBlue/20 italic">Select Annual Plan</button>
+                </div>
+
+                <div class="border border-runwayGray bg-cloudWhite/30 rounded-2xl p-8 relative">
+                    <h4 class="text-xl font-bold text-aviationNavy mb-2">Quarterly Blocks</h4>
+                    <p class="text-slate-500 text-xs font-light mb-6 italic">Medium term testing flexibility designed around modular certification stages.</p>
+                    <div class="flex items-baseline gap-1 mb-6">
+                        <span class="text-4xl font-bold text-aviationNavy tracking-tight">R640</span>
+                        <span class="text-slate-400 text-sm italic">/ month</span>
+                    </div>
+                    <p class="text-xs text-slate-400 font-light mb-6 italic">Billed every 3 months (R1,920 payment processing)</p>
+                    <ul class="space-y-3 text-sm text-slate-600 mb-8 font-light italic">
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Access to all 8 core subjects</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> Premium Simulator Modes</li>
+                        <li><i class="fa-solid fa-check text-successGreen mr-2"></i> 10,000+ Active Questions</li>
+                        <li class="text-slate-300"><i class="fa-solid fa-xmark mr-2"></i> Advanced Performance Analytics</li>
+                    </ul>
+                    <button class="w-full py-3 px-4 border border-aviationNavy/20 text-aviationNavy font-semibold rounded-xl text-sm hover:bg-aviationNavy hover:text-white transition italic">Select Quarterly Plan</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-aviationNavy text-cloudWhite/60 text-xs py-12 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-3 text-white">
+                <div class="w-8 h-8 rounded-full overflow-hidden bg-white flex items-center justify-center p-0.5">
+                    <img src="WhatsApp Image 2026-06-23 at 23.28.24.jpg" alt="SkySkool Logo" class="w-full h-full object-cover rounded-full">
+                </div>
+                <span class="font-bold tracking-wider uppercase text-sm">Sky<span class="text-skyBlue font-normal italic">Skool</span></span>
+            </div>
+            <div class="flex space-x-8 text-xs font-medium tracking-wide">
+                <a href="#home" class="hover:text-white transition">Home</a>
+                <a href="#why-skyskool" class="hover:text-white transition">Why SkySkool</a>
+                <a href="#subjects" class="hover:text-white transition">Subjects</a>
+                <a href="#pricing" class="hover:text-white transition">Pricing</a>
+            </div>
+            <div class="font-light tracking-wide text-center md:text-right italic">
+                &copy; 2026 SkySkool Systems Inc. Study Higher. Fly Further.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
